@@ -9,6 +9,24 @@
             <x-input-error :messages="$errors->get('name')" class="mt-2" />
         </div>
 
+        <div>
+            <x-input-label for="surname" :value="__('Surname')" />
+            <x-text-input id="surname" class="block mt-1 w-full" type="text" name="surname" :value="old('surname')" required autofocus autocomplete="surname" />
+            <x-input-error :messages="$errors->get('surname')" class="mt-2" />
+        </div>
+
+        <div>
+            <x-input-label for="tel" :value="__('Tel')" />
+            <x-text-input id="tel" class="block mt-1 w-full" type="tel" name="tel" :value="old('tel')" required autofocus autocomplete="tel" />
+            <x-input-error :messages="$errors->get('tel')" class="mt-2" />
+        </div>
+
+        <div>
+            <x-input-label for="date_birth" :value="__('Дата рождения')" />
+            <x-text-input id="date_birth" class="block mt-1 w-full" type="date" name="date_birth" :value="old('date_birth')" required autofocus autocomplete="date_birth" />
+            <x-input-error :messages="$errors->get('date_birth')" class="mt-2" />
+        </div>
+
         <!-- Email Address -->
         <div class="mt-4">
             <x-input-label for="email" :value="__('Email')" />
@@ -41,7 +59,7 @@
 
         <div class="flex items-center justify-end mt-4">
             <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
-                {{ __('Already registered?') }}
+                {{ __('Войти') }}
             </a>
 
             <x-primary-button class="ms-4">
